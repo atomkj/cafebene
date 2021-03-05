@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/*메인슬라이더*/
+.mainSlider{
+    height:650px;  /*2.세로값을 적용해야 부모영역이 잡힘*/ 
+    position:relative;  /*5.부모에게 기준을 적용*/
+    overflow:hidden;  /*6.벗어난 부분을 숨겨줌*/      
+}
+.mainSlider img{
+    position:absolute; /*1.이미지를 띄운다/전체적으로 화면으로 보여지기 위한 적용*/
+    left:50%;            /*3.중앙정렬하기 위해 50%적용*/
+    margin-left:-960px;  /*4.옆으로 반으로 줄여서 적용*/
+}
+
+
+/*메인컨텐츠01*/
+.mainCon01{
+    text-align:center;    /*3.모든텍스트를 중간으로 정렬*/
+    background:#f5f5f5 url(../images/main/bg_bar_div.gif) no-repeat center center;
+    /*5.전체영역에 배경색 주기전에 중간 이미지를 바를 전체부모에서 중간 정렬을 시켜주고 난후 색상적용*/
+    padding:50px 0; 
+    
+}
+
+.mainCon01>div{
+    display:inline-block;   /*2.옆으로 오게 일라인블럭을 줌*/
+    text-align:left;         /*4.박스안에 영역에서 왼쪽으로 정렬*/
+    vertical-align:top;      /*7.con01L h2 적용하고 나면 세로간격의 차이가 나니 한번에 탑으로 올려줌*/
+    padding:0 50px;          /*9.왼쪽오른쪽의 여백을 적용*/
+}
+.mainCon01>div span{
+    display:block;          /*1.span을 줄바꿈하기*/ 
+}
+
+.mainCon01 .con01L{
+     padding-left:130px;   /*10.위에 패딩을 줘서 con01L에다 주면 지기때문에 부모를 불러서 적용해줘야함*/  
+}
+.con01L h2{
+    color:#711b04;          /*6.폰트적용*/
+    margin-bottom:30px; 
+}
+.con01L p{}
+.con01L span{}
+
+.con01R{
+    font-size:14px;
+    line-height:25px; 
+}
+.con01R span{}
+
+.plusBtn{                    /*8.플러스버튼적용*/
+    width:40px;
+    height:40px;
+    background:url(../images/main/btn_more02.png) no-repeat;
+    background-size:100%;     /*이미지가 가로세로값보다 크기때문에 박스사이즈에 맞춰줌*/
+    text-indent:-9999px;
+    margin-top:20px;
+    margin-left:20px; 
+}
+.plusBtn a{
+    display:block;          
+}
+
+/*메인컨텐츠02*/
+.mainCon02{
+    background:url(../images/main/visual01.jpg) no-repeat center center;   /*2.*/
+    background-attachment:fixed;        /*15.스크롤로 내렸을때 배경을 고정하게 적용*/
+    background-size:cover;              /*16.background-attachment:fixed 적용 한후 배경사이즈가 줄어지기때문에 커버도 같이 적용해야함*/
+    color:#fff;                 /*3.*/
+    text-align:center;          /*4.글씨정렬*/  
+    padding:100px 0 50px 0;    /*13.전체적으로 위,오른쪽,아래,왼쪽 여백을 안쪽으로 생기게 여백을 준다.*/    
+}
+
+.mainCon02 h2{       
+    font-family:"NotoSans",sans-serif;   /*5.제목태그 폰트 적용*/
+    font-weight:400;
+    background:url(../images/main/tit_line_bot.png) no-repeat center bottom;   /*6.h2밑에 있는 선 정렬해서 적용하기*/
+    padding-bottom:15px;        /*7.선기준으로 안쪽으로 여백을 주고*/
+    margin-bottom:15px;        /*8.선기준으로 바깥으로 여백을 줌*/ 
+    
+}
+.mainCon02 p{
+    font-size:12px;            /*9.p태그전체 폰트 사이즈 적용*/
+    margin-top:15px;           /*11.mainCon02 h2에 margin-bottom를 줬으나 p태그에 margin-top을 동시에 주고 margin-bottom은 없애도 됨*/
+    line-height:22px;
+    font-weight:100;
+}
+.mainCon02 p span{
+    display:block;           /*1.일라인요소인 span을 한줄로 정리*/ 
+}
+.mainCon02 .con02SubTit{
+    font-size:14px;          /*10.con02SubTit폰트 사이즈 따로 적용*/
+    font-weight:400; 
+}
+.mainCon02 .plusBtn{          
+    background-image:url(../images/main/btn_more.png);  /*12.메인컨텐츠01에 있는 속성을 불러오기위해 이미지로 불러옴*/   
+    margin:0 auto;          /*13.플러스버튼 가운데정렬*/
+    margin-top:50px;      /*14.패딩을 주면 플러스버튼영역도 같이 길어져서 마진을 주고 위에 마진 0 auto를 줘서 top을 주려면 밑에다 적용해야함*/ 
+}
+
+/*메인컨텐츠03*/
+.mainCon03{
+    text-align:center;     /*1.글씨를 전체적으로 중앙정렬(블럭안에 이미지가 있어서 이미지도 중앙정렬되니 플루트레플트 적용*/
+    padding:80px 0;       /*11.위아래로 여백주기*/
+}
+
+.con03Tit{}
+.con03Tit h2{             /*3.h2 폰트적용*/
+    color:#711b04;    
+}
+.con03Tit p{
+    margin:20px 0;       /*4.h2의 p태그 마진적용*/ 
+}
+
+.con03Menu{}
+.con03Menu li{
+    float:left;         /*2.*/
+    position:relative;   /*7.img는 형제기준이기때문에 li(부모)에게 기준점을 주고나면 .menuInfo bottom주기*/
+    margin-left:3px;     /*9.각각 li에게 위아래로 여백을 주고*/
+    margin-top:3px; 
+}
+.con03Menu li:first-child{margin-left:0;}   /*10.첫번째 li에 여백을 없애준다*/
+.con03Menu li a{}
+.con03Menu li img{
+    display:block;     /*이미지의 여백없애기*/
+}
+
+.menuInfo{
+    position:absolute;     /*5.메뉴를 띄운다(띄우면 자기영역만큼만 뜨기때문에 중앙정렬한게 왼쪽으로 붙음)*/
+    bottom:20px;           /*6.bottom을 안주면 글자가 이미지 뒤에 숨거나 자리에 잡히지 않아 위치를 적용*/
+    width:100%;            /*8.width:100%를 주면 각각의 li영역안 기준으로 중앙정렬 됨*/  
+}
+.menuInfo h3{
+    font-size:16px;      /*h3의 폰트적용*/
+    color:#7d645a;
+}
+.menuInfo p{             /*p태그 폰트적용*/
+    font-size:12px; 
+}
+/*메인컨텐츠04*/
+.mainCon04{
+    background-image:url(../images/main/visual02.jpg);   /*이미지는 no-repeat할필요없음*/
+    background-attachment:inherit;    /*mainCon02의 스크롤이 적용안되게 적용*/
+    padding:150px 0; 
+}
+.mainCon04 h2{
+    font-family:"NanumMyeongjo" ,serif;
+    font-weight:900;     
+}
+
+.mainCon04 .searchBtn{   /*mainCon02의 속성이 그대로 적용된 상태*/
+    width:280px;        
+    background-image:url(../images/main/btn_find_store.png);
+    background-position:center bottom;   /*mainCon02의 세로값으로 밑에 여백이 있으니 포지션적용*/
+}
+
+/*mainCon05*/
+.mainCon05{
+    background-color:#beb4af;
+    color:#fff;
+    text-align:center;      /*전체적으로 중간정렬*/
+    padding:50px 0; 
+}
+.mainCon05 h2,.mainCon05 p,.mainCon05 .plusBtn{  /*그룹선택하기*/
+    display:inline-block;
+    vertical-align:middle; 
+}
+.mainCon05 h2{}
+.mainCon05 p{
+    margin:0 20px 0 50px;
+}
+.mainCon05 .plusBtn{
+    margin:0 0 0 0;        /*mainCon02에 있는 속성에 마진탑이 적용되어 있어 마진없애줌*/     
+}
+
+/*메인컨텐츠06*/
+.mainCon06{
+    background:url(../images/main/bg_visual.jpg) no-repeat center 10%;
+    background-size:cover;
+    padding:80px 0; 
+}
+
+.con06List{
+   
+}
+.con06List li{    
+    width:25%;       /*한줄에 4개가 있으니 가로 25%로 적용*/
+    padding:0 20px;
+    box-sizing:border-box;   /*패딩주고 나면 여백때문에 밑으로 떨어지니 박스사이징적용*/ 
+    text-align:center; /*글씨중간정렬*/
+    float:left;
+    height:150px;   /*플루트를 주고 나면 각각의 li의 글자수가 달라 세로간격이 다 다르니 세로값을 정해줌*/
+    font-family:"NanumMyeongjo" ,serif;
+    font-weight:900; 
+}
+.con06List li h3{
+    font-size:18px;
+    color:#7b645a;
+    vertical-align:top;
+    margin-bottom:20px; 
+}
+.con06List li h3 img{
+    width:20px;
+    vertical-align:middle;   /*이미지와 span을 중간정렬하려면 둘다에게 적용*/
+}
+.con06List li h3 span{
+    vertical-align:middle;
+}
+.con06List li p{
+    font-size:14px; 
+}
